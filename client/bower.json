@@ -1,0 +1,18 @@
+{
+  "name": "ehealth_learning",
+  "description": "A Learning Platform from the eHealth-Africa Organization.\"",
+  "main": "Gruntfile.js",
+  "authors": [
+    "Osman Jalloh",
+    "Moussa Traore"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/TheBlackDude/eHealth_learning",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
