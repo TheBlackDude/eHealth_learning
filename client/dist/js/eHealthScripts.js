@@ -4,12 +4,14 @@
     angular.module('eHealth', [
         'eHealth.home',
         'eHealth.config',
-        'eHealth.routes'
+        'eHealth.routes',
+        'eHealth.controllers'
     ]);
 
     angular.module('eHealth.home', []);
     angular.module('eHealth.config', []);
     angular.module('eHealth.routes', ['ngRoute']);
+    angular.module('eHealth.controllers', []);
 
 })();
 
@@ -38,6 +40,11 @@
                 controllerAs: 'vm',
                 templateUrl: '/static/views/home.html'
             })
+            .when('/lecture', {
+                controller: 'LectureCtrl',
+                controllerAs: 'vm',
+                templateUrl: '/static/views/lectures.html'
+            })
             .otherwise('/');
 
     }]);
@@ -52,6 +59,19 @@
     .controller('HomeCtrl', ['$scope', function($scope){
         var vm = this;
         vm.greet = 'Welcome to eHealth-Africa Learning';
+
+    }]);
+
+})();
+
+(function() {
+    'use strict';
+
+    angular.module('eHealth.controllers')
+    .controller('LectureCtrl', ['$scope', function($scope) {
+        var vm = this;
+
+        vm.greet = 'this is the lectures page.';
 
     }]);
 

@@ -9,6 +9,11 @@
                 controllerAs: 'vm',
                 templateUrl: '/static/views/home.html'
             })
+            .when('/lecture', {
+                controller: 'LectureCtrl',
+                controllerAs: 'vm',
+                templateUrl: '/static/views/lectures.html'
+            })
             .otherwise('/');
 
     }]);
