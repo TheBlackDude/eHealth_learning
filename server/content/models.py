@@ -15,3 +15,13 @@ class Host(models.Model):
         return self.name
 
 
+class Overview(models.Model):
+    week = models.CharField(max_length=20)
+    monday = models.TextField(default='')
+    tuesday = models.TextField(default='')
+    wednesday = models.TextField(default='')
+    thursday = models.TextField(default='')
+    friday = models.TextField(default='')
+
+    def __str__(self):
+        return self.week
