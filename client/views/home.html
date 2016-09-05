@@ -13,18 +13,23 @@
                         <thead>
                           <tr>
                             <th style="width:12%">Weeks</th>
-                            <th style="width:20%">Monday</th>
-                            <th style="width:20%">Tuesday</th>
+                            <th style="width:18%">Monday</th>
+                            <th style="width:18%">Tuesday</th>
                             <th style="width:18%">Wednesday</th>
                             <th style="width:18%">Thursday</th>
-                            <th style="width:30%">Friday</th>
+                            <th style="width:18%">Friday</th>
                           </tr>
                         </thead>
                         <tbody>
                           <!--Schedules are inserted here by angular-->
-                          <td><div class="panel-body text-primary">week 1
-<p>Date</p></div></td>
-                          <td><div class="panel-body">content</div></td>
+                          <tr ng-repeat="content in vm.contents">
+	                      <td><div class="panel-body text-primary">{{content.week}}</div></td>
+                              <td><div class="panel-body">{{content.monday}}</div></td>
+                              <td><div class="panel-body">{{content.tuesday}}</div></td>
+                              <td><div class="panel-body">{{content.wednesday}}</div></td>
+                              <td><div class="panel-body">{{content.thursday}}</div></td>
+                              <td><div class="panel-body">{{content.friday}}</div></td>
+                          </tr>
                         </tbody>
                       </table>
                  </div>
