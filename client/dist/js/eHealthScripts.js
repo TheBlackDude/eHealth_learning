@@ -57,6 +57,11 @@
                 controllerAs: 'vm',
                 templateUrl: '/static/views/projects.html',
             })
+            .when('/resources', {
+                controller: 'ResourceCtrl',
+                controllerAs: 'vm',
+                templateUrl: '/static/views/resources.html'
+            })
             .otherwise('/');
 
     }]);
@@ -167,6 +172,18 @@
         Project.getProjects();
 
         vm.projects = Project.allProjects;
+    }]);
+
+})();
+
+(function() {
+    'use strict';
+
+    angular.module('eHealth.controllers')
+    .controller('ResourceCtrl', ['$scope', function($scope) {
+        var vm = this;
+        vm.head = 'More Resources';
+
     }]);
 
 })();
