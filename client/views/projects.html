@@ -20,11 +20,11 @@
                       </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Osman Jalloh</td>
-                            <td>eHealth-Learning</td>
-                            <td>To give everyone access to the content covered at the eHealth-Academy and Give FeedBack</td>
-                            <td><a href="https://github.com/TheBlackDude/eHealth_learning" target="blank">github.com</td>
+                        <tr ng-repeat="project in vm.projects">
+                            <td>{{project.authors}}</td>
+                            <td>{{project.name}}</td>
+                            <td>{{project.description}}</td>
+                            <td><a href="{{project.repo}}" target="blank">{{project.repo.slice(18)}}</td>
                         </tr>
                     </tbody>
                   </table>

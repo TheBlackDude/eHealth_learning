@@ -91,6 +91,32 @@
 (function() {
     'use strict';
 
+    angular.module('eHealth.services')
+    .factory('Project', ['$http', function($http) {
+        var Project = {
+            allProjects: [],
+            allErrors: [],
+            getProjects: getProjects
+        }
+
+        function getProjects() {
+            return $http.get('/api/projects').success(function(data){
+                angular.copy(data, Project.allProjects);
+            }).error(function(err){
+                angular.copy(err, Project.allErrors);
+            });
+
+        }
+
+        return Project;
+
+    }]);
+
+})();
+
+(function() {
+    'use strict';
+
     angular.module('eHealth.home')
     .controller('HomeCtrl', ['$scope', 'Content', function($scope, Content){
         var vm = this;
@@ -134,9 +160,13 @@
     'use strict';
 
     angular.module('eHealth.controllers')
-    .controller('ProjectCtrl', ['$scope', function($scope) {
+    .controller('ProjectCtrl', ['$scope', 'Project', function($scope, Project) {
         var vm = this;
-        vm.info = 'Projects Built By The Academy Attendies'; 
+        vm.info = 'Projects Built By The Academy Attendies';
+
+        Project.getProjects();
+
+        vm.projects = Project.allProjects;
     }]);
 
 })();
