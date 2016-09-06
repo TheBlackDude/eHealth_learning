@@ -14,6 +14,11 @@
                 controllerAs: 'vm',
                 templateUrl: '/static/views/lectures.html'
             })
+            .when('/info', {
+                controller: 'InfoCtrl',
+                controllerAs: 'vm',
+                templateUrl: '/static/views/info.html'
+            })
             .otherwise('/');
 
     }]);
