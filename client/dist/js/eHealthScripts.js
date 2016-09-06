@@ -52,6 +52,11 @@
                 controllerAs: 'vm',
                 templateUrl: '/static/views/info.html'
             })
+            .when('/projects', {
+                controller: 'ProjectCtrl',
+                controllerAs: 'vm',
+                templateUrl: '/static/views/projects.html',
+            })
             .otherwise('/');
 
     }]);
@@ -121,6 +126,17 @@
 
         vm.greet = 'this is the lectures page.';
 
+    }]);
+
+})();
+
+(function() {
+    'use strict';
+
+    angular.module('eHealth.controllers')
+    .controller('ProjectCtrl', ['$scope', function($scope) {
+        var vm = this;
+        vm.info = 'Projects Built By The Academy Attendies'; 
     }]);
 
 })();

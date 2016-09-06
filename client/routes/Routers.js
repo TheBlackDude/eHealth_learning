@@ -19,6 +19,11 @@
                 controllerAs: 'vm',
                 templateUrl: '/static/views/info.html'
             })
+            .when('/projects', {
+                controller: 'ProjectCtrl',
+                controllerAs: 'vm',
+                templateUrl: '/static/views/projects.html',
+            })
             .otherwise('/');
 
     }]);
