@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from rest_framework import generics
-from .models import Host, Overview
-from .serializers import HostSerializer, OverviewSerializer
+from .models import Host, Overview, Project
+from .serializers import HostSerializer, OverviewSerializer, ProjectSerializer
 
 
 def index(request):
@@ -30,3 +30,15 @@ class OverviewDetail(generics.RetrieveUpdateDestroyAPIView):
     """An API endpoint for retrieving, deleting contents."""
     queryset = Overview.objects.all()
     serializer_class = OverviewSerializer
+
+
+class ProjectListCreate(generics.ListCreateAPIView):
+    """An API endpoint for creating and listing Projects."""
+    queryset = Project.objects.all()
+    serializer_class = ProjectSerializer
+
+
+class ProjectDetail(generics.RetrieveUpdateDestroyAPIView):
+    """An API endpoint for retrieving, updating, deleting Projects."""
+    queryset = Project.objects.all()
+    serializer_class = ProjectSerializer
