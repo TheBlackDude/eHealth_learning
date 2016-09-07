@@ -29,6 +29,11 @@
                 controllerAs: 'vm',
                 templateUrl: '/static/views/resources.html'
             })
+            .when('/feedback', {
+                controller: 'FeedBackCtrl',
+                controllerAs: 'vm',
+                templateUrl: '/static/views/feedback.html'
+            })
             .otherwise('/');
 
     }]);

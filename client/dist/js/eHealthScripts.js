@@ -62,6 +62,11 @@
                 controllerAs: 'vm',
                 templateUrl: '/static/views/resources.html'
             })
+            .when('/feedback', {
+                controller: 'FeedBackCtrl',
+                controllerAs: 'vm',
+                templateUrl: '/static/views/feedback.html'
+            })
             .otherwise('/');
 
     }]);
@@ -97,6 +102,44 @@
     'use strict';
 
     angular.module('eHealth.services')
+    .factory('FeedBack', ['$http', function($http) {
+        var FeedBack = {
+            allFeedbacks: [],
+            allErrors: [],
+            getFeedbacks: getFeedbacks,
+            createFeedbacks: createFeedbacks
+        }
+
+        function getFeedbacks() {
+            return $http.get('/api/feedbacks').success(function(data){
+                angular.copy(data, FeedBack.allFeedbacks);
+            }).error(function(err){
+                angular.copy(err, FeedBack.allErrors);
+            });
+        }
+
+        function createFeedbacks(name,email,notes) {
+            return $http.post('/api/feedbacks/', {
+                name: name,
+                email: email,
+                notes: notes
+            }).success(function(data){
+                FeedBack.allFeedbacks.push(data);
+            }).error(function(err){
+                FeedBack.allErrors.push(err);
+            });
+        }
+
+        return FeedBack;
+
+    }]);
+
+})();
+
+(function() {
+    'use strict';
+
+    angular.module('eHealth.services')
     .factory('Project', ['$http', function($http) {
         var Project = {
             allProjects: [],
@@ -114,6 +157,30 @@
         }
 
         return Project;
+
+    }]);
+
+})();
+
+(function() {
+    'use strict';
+
+    angular.module('eHealth.controllers')
+    .controller('FeedBackCtrl', ['$scope', 'FeedBack', function($scope,FeedBack) {
+        var vm = this;
+        vm.head = 'Your FeedBack Is Important To Us.';
+        
+        FeedBack.getFeedbacks();
+        vm.feedbacks = FeedBack.allFeedbacks;
+
+        vm.CreateFeedBack = function(){
+            FeedBack.createFeedbacks(vm.name,vm.email,vm.notes);
+
+            vm.name = '';
+            vm.email = '';
+            vm.notes = '';
+        }
+
 
     }]);
 
