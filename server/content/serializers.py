@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Host, Overview, Project
+from .models import Host, Overview, Project, FeedBack
 
 
 class HostSerializer(serializers.ModelSerializer):
@@ -25,3 +25,11 @@ class ProjectSerializer(serializers.ModelSerializer):
     class Meta:
         model = Project
         fields = ('id', 'authors', 'name', 'description', 'repo')
+
+
+class FeedBackSerializer(serializers.ModelSerializer):
+    """A Serializer for the FeedBack Model."""
+
+    class Meta:
+        model = FeedBack
+        fields = ('id', 'name', 'email', 'notes')

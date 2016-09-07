@@ -39,3 +39,16 @@ class Project(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class FeedBack(models.Model):
+    name = models.CharField(max_length=50)
+    email = models.EmailField()
+    notes = models.TextField(default='')
+
+    class Meta:
+        verbose_name_plural = 'FeedBacks'
+
+
+    def __str__(self):
+        return self.name

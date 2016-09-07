@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from rest_framework import generics
-from .models import Host, Overview, Project
-from .serializers import HostSerializer, OverviewSerializer, ProjectSerializer
+from .models import Host, Overview, Project, FeedBack
+from .serializers import (HostSerializer, OverviewSerializer,
+                         ProjectSerializer, FeedBackSerializer)
 
 
 def index(request):
@@ -42,3 +43,15 @@ class ProjectDetail(generics.RetrieveUpdateDestroyAPIView):
     """An API endpoint for retrieving, updating, deleting Projects."""
     queryset = Project.objects.all()
     serializer_class = ProjectSerializer
+
+
+class FeedBackListCreate(generics.ListCreateAPIView):
+    """An API endpoint for creating and listing feedbacks."""
+    queryset = FeedBack.objects.all()
+    serializer_class = FeedBackSerializer
+
+
+class FeedBackDetail(generics.RetrieveUpdateDestroyAPIView):
+    """An API endpoint for retrieving, updating, deleting feedbacks"""
+    queryset = FeedBack.objects.all()
+    serializer_class = FeedBackSerializer
