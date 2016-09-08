@@ -12,18 +12,17 @@
                       <table class="table table-striped table-hover table-bordered">
                         <thead>
                           <tr>
-                            <th style="width:12%">Weeks</th>
-                            <th style="width:18%">Monday</th>
-                            <th style="width:18%">Tuesday</th>
-                            <th style="width:18%">Wednesday</th>
-                            <th style="width:18%">Thursday</th>
-                            <th style="width:18%">Friday</th>
+                              <th style="width:10%">Weeks</th>
+                              <th style="width:18%">Monday</th>
+                              <th style="width:18%">Tuesday</th>
+                              <th style="width:18%">Wednesday</th>
+                              <th style="width:18%">Thursday</th>
+                              <th style="width:18%">Friday</th>
                           </tr>
                         </thead>
                         <tbody>
-                          <!--Schedules are inserted here by angular-->
                           <tr ng-repeat="content in vm.contents">
-	                      <td><div class="panel-body text-primary">{{content.week}}</div></td>
+                              <td><div class="panel-body">{{content.week}}</div></td>
                               <td><div class="panel-body">{{content.monday}}</div></td>
                               <td><div class="panel-body">{{content.tuesday}}</div></td>
                               <td><div class="panel-body">{{content.wednesday}}</div></td>
