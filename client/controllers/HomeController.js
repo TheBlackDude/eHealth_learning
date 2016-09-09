@@ -6,9 +6,9 @@
         var vm = this;
         vm.greet = 'Welcome to eHealth-Africa Learning';
 
-        Content.getContent();
+       // Content.getContent();
 
-        vm.contents = Content.allContent;
+       // vm.contents = Content.allContent;
 
     }]);
 

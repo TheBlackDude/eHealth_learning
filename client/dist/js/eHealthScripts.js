@@ -37,12 +37,12 @@
     angular.module('eHealth.routes')
     .config(['$routeProvider', function($routeProvider){
         $routeProvider
-            .when('/', {
+           /* .when('/', {
                 controller: 'HomeCtrl',
                 controllerAs: 'vm',
                 templateUrl: '/static/views/home.html'
-            })
-            .when('/lecture', {
+            })*/
+            .when('/', {
                 controller: 'LectureCtrl',
                 controllerAs: 'vm',
                 templateUrl: '/static/views/lectures.html'
@@ -194,9 +194,9 @@
         var vm = this;
         vm.greet = 'Welcome to eHealth-Africa Learning';
 
-        Content.getContent();
+       // Content.getContent();
 
-        vm.contents = Content.allContent;
+       // vm.contents = Content.allContent;
 
     }]);
 
