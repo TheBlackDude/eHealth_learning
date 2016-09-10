@@ -1,0 +1,18 @@
+<form role="form" ng-submit="vm.createProject()">
+    <h3 class="text-success">Add Project</h3>
+    <div class="form-group">
+        <input type="text" class="form-control" ng-model="vm.authors" placeholder="authors(Required)" />
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" ng-model="vm.name" placeholder="Project Name(Required)" />
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" ng-model="vm.description" placeholder="Description of your project(Required)" />
+    </div>
+    <div class="form-group">
+        <input type="url" class="form-control" ng-model="vm.repo" placeholder="Your full repo Url Ex.https://github.com/user/repo" />
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Add</button>
+    </div>
+</form>

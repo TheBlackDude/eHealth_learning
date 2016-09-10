@@ -14,7 +14,7 @@
     angular.module('eHealth.config', []);
     angular.module('eHealth.routes', ['ngRoute']);
     angular.module('eHealth.services', []);
-    angular.module('eHealth.controllers', []);
+    angular.module('eHealth.controllers', ['ngDialog']);
     angular.module('eHealth.utils', []);
 
 })();

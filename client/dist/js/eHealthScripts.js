@@ -14,7 +14,7 @@
     angular.module('eHealth.config', []);
     angular.module('eHealth.routes', ['ngRoute']);
     angular.module('eHealth.services', []);
-    angular.module('eHealth.controllers', []);
+    angular.module('eHealth.controllers', ['ngDialog']);
     angular.module('eHealth.utils', []);
 
 })();
@@ -144,11 +144,12 @@
     'use strict';
 
     angular.module('eHealth.services')
-    .factory('Project', ['$http', function($http) {
+    .factory('Project', ['$http','Snackbar', function($http,Snackbar) {
         var Project = {
             allProjects: [],
             allErrors: [],
-            getProjects: getProjects
+            getProjects: getProjects,
+            createProject: createProject
         }
 
         function getProjects() {
@@ -156,6 +157,22 @@
                 angular.copy(data, Project.allProjects);
             }).error(function(err){
                 angular.copy(err, Project.allErrors);
+            });
+
+        }
+
+        function createProject(authors,name,description,repo) {
+            return $http.post('/api/projects/', {
+                authors: authors,
+                name: name,
+                description: description,
+                repo: repo
+            }).success(function(data){
+                Project.allProjects.push(data);
+                Snackbar.show('<p class="snackbar">Project Successfully Added</p>');
+            }).error(function(err){
+                Project.allErrors.push(err);
+                Snackbar.error(err);
             });
 
         }
@@ -267,13 +284,32 @@
     'use strict';
 
     angular.module('eHealth.controllers')
-    .controller('ProjectCtrl', ['$scope', 'Project', function($scope, Project) {
+    .controller('ProjectCtrl', ['$scope', 'Project','ngDialog',
+                 function($scope, Project, ngDialog) {
         var vm = this;
         vm.info = 'Projects Built By The Academy Attendies';
 
         Project.getProjects();
 
         vm.projects = Project.allProjects;
+
+        vm.addProject = function() {
+            ngDialog.open({
+                template: '/static/views/addproject.html',
+                className: 'ngdialog-theme-default',
+                controller: ['$scope','Project',
+                             function($scope, Project){
+                    var vm = this;
+
+                    vm.createProject = function() {
+                        Project.createProject(vm.authors,vm.name,vm.description,vm.repo);
+                        $scope.closeThisDialog();
+                    };
+                }],
+                controllerAs: 'vm'
+            });
+
+        }
     }]);
 
 })();
