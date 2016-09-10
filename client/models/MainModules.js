@@ -6,7 +6,8 @@
         'eHealth.config',
         'eHealth.routes',
         'eHealth.services',
-        'eHealth.controllers'
+        'eHealth.controllers',
+        'eHealth.utils'
     ]);
 
     angular.module('eHealth.home', []);
@@ -14,5 +15,6 @@
     angular.module('eHealth.routes', ['ngRoute']);
     angular.module('eHealth.services', []);
     angular.module('eHealth.controllers', []);
+    angular.module('eHealth.utils', []);
 
 })();

@@ -31,7 +31,13 @@ ul {
   word-wrap: break-word;
 }
 
-.feedback {
-    border: 3px solid white;
+.snackbar {
+    width: 70;
+    height: 30;
+    color: white;
+    margin-bottom: 15;
+    background: gray;
+    font-size: 15px;
+    border: 15 solid black;
     border-radius: 5px;
 }

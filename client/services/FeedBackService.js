@@ -2,7 +2,7 @@
     'use strict';
 
     angular.module('eHealth.services')
-    .factory('FeedBack', ['$http', function($http) {
+    .factory('FeedBack', ['$http','Snackbar', function($http, Snackbar) {
         var FeedBack = {
             allFeedbacks: [],
             allErrors: [],
@@ -25,8 +25,10 @@
                 notes: notes
             }).success(function(data){
                 FeedBack.allFeedbacks.push(data);
+                Snackbar.show('<p class="snackbar">FeedBack Successfull!</p>');
             }).error(function(err){
                 FeedBack.allErrors.push(err);
+                Snackbar.error(err);
             });
         }
 

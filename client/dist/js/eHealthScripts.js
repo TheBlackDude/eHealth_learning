@@ -6,7 +6,8 @@
         'eHealth.config',
         'eHealth.routes',
         'eHealth.services',
-        'eHealth.controllers'
+        'eHealth.controllers',
+        'eHealth.utils'
     ]);
 
     angular.module('eHealth.home', []);
@@ -14,6 +15,7 @@
     angular.module('eHealth.routes', ['ngRoute']);
     angular.module('eHealth.services', []);
     angular.module('eHealth.controllers', []);
+    angular.module('eHealth.utils', []);
 
 })();
 
@@ -102,7 +104,7 @@
     'use strict';
 
     angular.module('eHealth.services')
-    .factory('FeedBack', ['$http', function($http) {
+    .factory('FeedBack', ['$http','Snackbar', function($http, Snackbar) {
         var FeedBack = {
             allFeedbacks: [],
             allErrors: [],
@@ -125,8 +127,10 @@
                 notes: notes
             }).success(function(data){
                 FeedBack.allFeedbacks.push(data);
+                Snackbar.show('<p class="snackbar">FeedBack Successfull!</p>');
             }).error(function(err){
                 FeedBack.allErrors.push(err);
+                Snackbar.error(err);
             });
         }
 
@@ -161,6 +165,37 @@
     }]);
 
 })();
+
+(function($, _) {
+    'use strict';
+
+    angular.module('eHealth.utils')
+    .factory('Snackbar', [function() {
+        var Snackbar = {
+            error: error,
+            show: show
+        }
+
+        function _snackbar(content, options) {
+            options = _.extend({timeout: 3000}, options);
+            options.content = content; 
+
+            $.snackbar(options);
+        }
+
+        function error(content, options) {
+            _snackbar('Error:' + content, options)
+        }
+
+        function show(content, options) {
+            _snackbar(content, options);
+        }
+
+        return Snackbar;
+
+    }]);
+
+})($, _);
 
 (function() {
     'use strict';
