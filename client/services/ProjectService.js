@@ -27,7 +27,7 @@
                 repo: repo
             }).success(function(data){
                 Project.allProjects.push(data);
-                Snackbar.show('<p class="snackbar">Project Successfully Added</p>');
+                Snackbar.show('Project Successfully Added');
             }).error(function(err){
                 Project.allErrors.push(err);
                 Snackbar.error(err);

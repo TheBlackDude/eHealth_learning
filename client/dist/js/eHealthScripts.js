@@ -75,6 +75,37 @@
 
 })();
 
+(function($, _) {
+    'use strict';
+
+    angular.module('eHealth.utils')
+    .factory('Snackbar', [function() {
+        var Snackbar = {
+            error: error,
+            show: show
+        }
+
+        function _snackbar(content, options) {
+            options = _.extend({timeout: 3000}, options);
+            options.content = content; 
+
+            $.snackbar(options);
+        }
+
+        function error(content, options) {
+            _snackbar('Error:' + content, options)
+        }
+
+        function show(content, options) {
+            _snackbar(content, options);
+        }
+
+        return Snackbar;
+
+    }]);
+
+})($, _);
+
 (function() {
     'use strict';
 
@@ -127,7 +158,7 @@
                 notes: notes
             }).success(function(data){
                 FeedBack.allFeedbacks.push(data);
-                Snackbar.show('<p class="snackbar">FeedBack Successfull!</p>');
+                Snackbar.show('Thanks for Your FeedBack!');
             }).error(function(err){
                 FeedBack.allErrors.push(err);
                 Snackbar.error(err);
@@ -169,7 +200,7 @@
                 repo: repo
             }).success(function(data){
                 Project.allProjects.push(data);
-                Snackbar.show('<p class="snackbar">Project Successfully Added</p>');
+                Snackbar.show('Project Successfully Added');
             }).error(function(err){
                 Project.allErrors.push(err);
                 Snackbar.error(err);
@@ -182,37 +213,6 @@
     }]);
 
 })();
-
-(function($, _) {
-    'use strict';
-
-    angular.module('eHealth.utils')
-    .factory('Snackbar', [function() {
-        var Snackbar = {
-            error: error,
-            show: show
-        }
-
-        function _snackbar(content, options) {
-            options = _.extend({timeout: 3000}, options);
-            options.content = content; 
-
-            $.snackbar(options);
-        }
-
-        function error(content, options) {
-            _snackbar('Error:' + content, options)
-        }
-
-        function show(content, options) {
-            _snackbar(content, options);
-        }
-
-        return Snackbar;
-
-    }]);
-
-})($, _);
 
 (function() {
     'use strict';

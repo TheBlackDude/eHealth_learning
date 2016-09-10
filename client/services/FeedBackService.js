@@ -25,7 +25,7 @@
                 notes: notes
             }).success(function(data){
                 FeedBack.allFeedbacks.push(data);
-                Snackbar.show('<p class="snackbar">FeedBack Successfull!</p>');
+                Snackbar.show('Thanks for Your FeedBack!');
             }).error(function(err){
                 FeedBack.allErrors.push(err);
                 Snackbar.error(err);
