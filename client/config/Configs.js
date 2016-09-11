@@ -10,7 +10,7 @@
         // setup translation
         $translateProvider
           .useStaticFilesLoader({
-             prefix: '/translations/',
+             prefix: '/static/translations/',
              suffix: '.json'
           })
           .preferredLanguage('en')

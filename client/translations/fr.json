@@ -1,4 +1,15 @@
 {
    "HEADING1": "codage heureux",
-   "HEADING2": "Bienvenue à la plateforme d'apprentissage eHealth - Afrique"
+   "HEADING2": "Bienvenue à la plateforme d'apprentissage eHealth - Afrique",
+   "EN_LANG_BUTTON": "En",
+   "FR_LANG_BUTTON": "Fr",
+   "LECTURE": {
+      "HEAD": "Conférences",
+      "MATERIAL": "Conférence Matériau",
+      "CONTENT": "Les conférences sont généralement cinq jours par semaine , et sont destinés à Techies intermédiaires . Chaque conférence porte sur un aspect particulier d'une technologie ou son écosystème . Conférences se renforcent mutuellement - qui est, le matériau devient progressivement plus avancé tout au long du trimestre. Les lames sont très animées , de sorte que les deux versions compressées et complets des plate-formes de diapositives sont téléchargés .Malheureusement , l'Académie n'enregistre des vidéos pleines , mais néanmoins les vidéos fournies sont des experts . Notre objectif est que les vidéos sont une ressource d'apprentissage utiles , et nous espérons qu'ils améliorent l'expérience de la technologie pour vous!"
+   },
+   "PROJECT": "Des projets",
+   "RESOURCE": "Ressources",
+   "INFO": "Academy Infos",
+   "FEED": "Retour d'information"
 }

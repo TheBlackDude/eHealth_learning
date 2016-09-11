@@ -1,6 +1,6 @@
 {% load staticfiles %}
 <!DOCTYPE html>
-<html lang="en" ng-app="eHealth">
+<html lang="{{ lang }}" ng-app="eHealth">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -34,6 +34,10 @@
            border-radius: 5px;
       }
 
+      #Lang {
+          margin-bottom: 10px;
+      }
+
     </style>
 
     <base href="/">
@@ -43,13 +47,19 @@
 
     <div class="container">
         <div class="row">
+            <!-- Translate -->
+            <div ng-controller="languageSwitchCtrl" id="Lang">
+               <h4>Click the Button Bellow to change your Language</h4>
+               <button ng-show="lang == 'en'" ng-click="changeLanguage('fr')" translate="FR_LANG_BUTTON" class="btn btn-primary"></button>
+               <button ng-show="lang == 'fr'" ng-click="changeLanguage('en')" translate="EN_LANG_BUTTON" class="btn btn-primary"></button>
+            </div>
             <!-- Page Head -->
             <div class="row">
                 <!-- Page Header -->
                 <div class="col-md-9">
                     <div class="page-header">
-                         <h1>eHealth-Academy <small>hap<span class="text-success">py</span> coding</small></h1>
-                         <h3 class="text-muted">Welcome To <span class="text-success">The</span> eHealth-Africa <span class="text-success">learning</span> Platform</h3>
+                         <h1>eHealth-Academy <small translate="HEADING1" class="text-success"></small></h1>
+                         <h3 translate="HEADING2" class="text-muted"></h3>
 
                     </div>
                 </div>
@@ -60,15 +70,16 @@
                     <script type="text/javascript" src="//ri.revolvermaps.com/0/0/8.js?i=82yc4qecehy&amp;m=0&amp;s=220&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33" async="async"></script>
                 </div>
             </div>
+            <!-- End Page Head -->
 
             <!-- Navigation Tabs -->
             <nav role="navigation">
                 <ul class="nav nav-tabs nav-justified" role="tablist" id="navigation">
-                    <li role="presentation" class="active"><a href="/lecture" aria-controls="lecture" role="tab" data-toggle="tab">Lectures</a></li>
-                    <li role="presentation"><a href="/projects" aria-controls="projects" role="tab" data-toggle="tab">Projects</a></li>
-                    <li role="presentation"><a href="/resources" aria-controls="resources" role="tab" data-toggle="tab">Resources</a></li>
-                    <li role="presentation"><a href="/info" aria-controls="info" role="tab" data-toggle="tab">Academy Info</a></li>
-                    <li role="presentation"><a href="/feedback" aria-controls="feedback" role="tab" data-toggle="tab">FeedBack</a></li>
+                    <li role="presentation" class="active"><a href="/lecture" aria-controls="lecture" role="tab" data-toggle="tab" translate="LECTURE.HEAD"></a></li>
+                    <li role="presentation"><a href="/projects" aria-controls="projects" role="tab" data-toggle="tab" translate="PROJECT"></a></li>
+                    <li role="presentation"><a href="/resources" aria-controls="resources" role="tab" data-toggle="tab" translate="RESOURCE"></a></li>
+                    <li role="presentation"><a href="/info" aria-controls="info" role="tab" data-toggle="tab" translate="INFO"></a></li>
+                    <li role="presentation"><a href="/feedback" aria-controls="feedback" role="tab" data-toggle="tab" translate="FEED"></a></li>
                 </ul>
             </nav>
             <!-- End Nav Tabs -->
