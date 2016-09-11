@@ -11,7 +11,7 @@
     ]);
 
     angular.module('eHealth.home', []);
-    angular.module('eHealth.config', []);
+    angular.module('eHealth.config', ['pascalprecht.translate']);
     angular.module('eHealth.routes', ['ngRoute']);
     angular.module('eHealth.services', []);
     angular.module('eHealth.controllers', ['ngDialog']);
@@ -23,8 +23,19 @@
     'use strict';
 
     angular.module('eHealth.config')
-    .config(['$locationProvider', function($locationProvider){
+    .config(['$locationProvider','$translateProvider',
+      function($locationProvider, $translateProvider){
+        // remove the hash
         $locationProvider.html5Mode(true);
+
+        // setup translation
+        $translateProvider
+          .useStaticFilesLoader({
+             prefix: '/translations/',
+             suffix: '.json'
+          })
+          .preferredLanguage('en')
+          .useMissingTranslationHandlerLog();
     }])
     .run(['$http', function($http){
         $http.defaults.xsrfHeaderName = 'X-CSRFToken';

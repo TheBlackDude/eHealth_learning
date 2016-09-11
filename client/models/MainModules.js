@@ -11,7 +11,7 @@
     ]);
 
     angular.module('eHealth.home', []);
-    angular.module('eHealth.config', []);
+    angular.module('eHealth.config', ['pascalprecht.translate']);
     angular.module('eHealth.routes', ['ngRoute']);
     angular.module('eHealth.services', []);
     angular.module('eHealth.controllers', ['ngDialog']);
