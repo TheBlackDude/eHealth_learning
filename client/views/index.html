@@ -47,12 +47,6 @@
 
     <div class="container">
         <div class="row">
-            <!-- Translate -->
-            <div ng-controller="languageSwitchCtrl" id="Lang">
-               <h4>Click the Button Bellow to change your Language</h4>
-               <button ng-show="lang == 'en'" ng-click="changeLanguage('fr')" translate="FR_LANG_BUTTON" class="btn btn-primary"></button>
-               <button ng-show="lang == 'fr'" ng-click="changeLanguage('en')" translate="EN_LANG_BUTTON" class="btn btn-primary"></button>
-            </div>
             <!-- Page Head -->
             <div class="row">
                 <!-- Page Header -->
@@ -71,6 +65,12 @@
                 </div>
             </div>
             <!-- End Page Head -->
+             <!-- Translate -->
+            <div ng-controller="languageSwitchCtrl" id="Lang">
+               <h4 class="text-muted" translate="LANG"></h4>
+               <button ng-show="lang == 'en'" ng-click="changeLanguage('fr')" translate="FR_LANG_BUTTON" class="btn btn-primary"></button>
+               <button ng-show="lang == 'fr'" ng-click="changeLanguage('en')" translate="EN_LANG_BUTTON" class="btn btn-primary"></button>
+            </div>
 
             <!-- Navigation Tabs -->
             <nav role="navigation">

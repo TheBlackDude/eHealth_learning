@@ -1,12 +1,17 @@
 {
+   "LANG": "The text on this Site can be viewed both in English and French But the Courses is only in English",
    "HEADING1": "happy coding",
    "HEADING2": "Welcome To The eHealth-Africa learning Platform",
    "EN_LANG_BUTTON": "En",
    "FR_LANG_BUTTON": "Fr",
    "LECTURE": {
       "HEAD": "Lectures",
+      "HEAD2": "Slides and Videos",
       "MATERIAL": "Lecture Material",
-      "CONTENT": "Lectures are generally five days per week, and are intended to intermediate Techies. Each lecture covers a particular aspect of a technology or its ecosystem. Lectures build on each other - that is, the material gets progressively more advanced throughout the quarter. Slides are heavily animated, so both the compressed and full versions of the slide decks are uploaded.\n Unfortunately, the Academy does not record full videos, but nevertheless the videos provided are from the experts. Our goal is that the videos are a helpful learning resource, and hopefully they improve the tech experience for you!"
+      "CONTENT": "Lectures are generally five days per week, and are intended to intermediate Techies. Each lecture covers a particular aspect of a technology or its ecosystem. Lectures build on each other - that is, the material gets progressively more advanced throughout the quarter. Slides are heavily animated, so both the compressed and full versions of the slide decks are uploaded.\n Unfortunately, the Academy does not record full videos, but nevertheless the videos provided are from the experts. Our goal is that the videos are a helpful learning resource, and hopefully they improve the tech experience for you!",
+      "TOPIC": "Topic",
+      "SLIDE": "Slides",
+      "VIDEO": "Video"
 
    },
    "PROJECT": "Projects",
