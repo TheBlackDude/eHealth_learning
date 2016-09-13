@@ -14,7 +14,16 @@
       "VIDEO": "Video"
 
    },
-   "PROJECT": "Projects",
+   "PROJECT": {
+      "PHEAD": "Projects",
+      "HEAD2": "Students Projects",
+      "HEAD3": "Why Build a Project",
+      "CONTENT": "The Projects provide a hands-on opportunity to experiment with the topics and concepts presented in lectures. Although students work on these projects in three days period, it would take much longer to fully complete a good project. Each project comes with a number of challenge problems that will take even the experiences programmer nontrivial time. projects are collaborative and open-source, Basicaly Helping you to think about how or why The Technologies we use as Tech Professionals makes their decisions. Each project is chosen by it's team to reinforce a particular concept, and you are encouraged to check them out. You are not expected to submit your project, although it will be good if you do. Think of projects as a chance to solidify your working knowledge of the Topics Covered - after all, what better way to learn Something than to practice it?",
+      "AUTHOR": "Authors",
+      "NPROJECT": "Project Name",
+      "DPROJECT": "Description",
+      "REPO": "Repository"
+   },
    "RESOURCE": "Resources",
    "INFO": "Academy Info",
    "FEED": "FeedBack"

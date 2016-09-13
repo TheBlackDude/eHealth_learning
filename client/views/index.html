@@ -36,6 +36,7 @@
 
       #Lang {
           margin-bottom: 10px;
+          margin-top: 10px;
       }
 
     </style>
@@ -60,23 +61,20 @@
                 <!-- End Page Header -->
 
                 <div class="col-md-3">
-                    <h3 class="text-info">Visitors</h3>
-                    <script type="text/javascript" src="//ri.revolvermaps.com/0/0/8.js?i=82yc4qecehy&amp;m=0&amp;s=220&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33" async="async"></script>
-                </div>
-            </div>
-            <!-- End Page Head -->
-             <!-- Translate -->
-            <div ng-controller="languageSwitchCtrl" id="Lang">
-               <h4 class="text-muted" translate="LANG"></h4>
+                    <div ng-controller="languageSwitchCtrl" id="Lang">
+               <strong class="text-info">Language</strong>
                <button ng-show="lang == 'en'" ng-click="changeLanguage('fr')" translate="FR_LANG_BUTTON" class="btn btn-primary"></button>
                <button ng-show="lang == 'fr'" ng-click="changeLanguage('en')" translate="EN_LANG_BUTTON" class="btn btn-primary"></button>
             </div>
+                </div>
+            </div>
+            <!-- End Page Head -->
 
             <!-- Navigation Tabs -->
             <nav role="navigation">
                 <ul class="nav nav-tabs nav-justified" role="tablist" id="navigation">
                     <li role="presentation" class="active"><a href="/lecture" aria-controls="lecture" role="tab" data-toggle="tab" translate="LECTURE.HEAD"></a></li>
-                    <li role="presentation"><a href="/projects" aria-controls="projects" role="tab" data-toggle="tab" translate="PROJECT"></a></li>
+                    <li role="presentation"><a href="/projects" aria-controls="projects" role="tab" data-toggle="tab" translate="PROJECT.PHEAD"></a></li>
                     <li role="presentation"><a href="/resources" aria-controls="resources" role="tab" data-toggle="tab" translate="RESOURCE"></a></li>
                     <li role="presentation"><a href="/info" aria-controls="info" role="tab" data-toggle="tab" translate="INFO"></a></li>
                     <li role="presentation"><a href="/feedback" aria-controls="feedback" role="tab" data-toggle="tab" translate="FEED"></a></li>

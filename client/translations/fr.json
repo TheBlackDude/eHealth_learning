@@ -13,7 +13,16 @@
       "SLIDE": "Diapositives",
       "VIDEO": "Vidéo"
    },
-   "PROJECT": "Des projets",
+   "PROJECT": {
+      "PHEAD": "Des projets",
+      "HEAD2": "Projets Etudiants",
+      "HEAD3": "Pourquoi construire un projet",
+      "CONTENT": "Les projets offrent une occasion pratique d'expérimenter avec les thèmes et les concepts présentés dans des conférences . Bien que les étudiants travaillent sur ces projets en période de trois jours , il faudrait beaucoup plus de temps pour remplir entièrement un bon projet . Chaque projet est livré avec un certain nombre de problèmes difficiles qui auront même l'expérience du programmeur de temps non négligeable . projets de collaboration et open-source , vous aidant à Fondamentalement penser comment ou pourquoi les technologies que nous utilisons comme Tech professionnels rend leurs décisions . Chaque projet est choisi par cette équipe pour renforcer un concept particulier , et vous êtes encouragés à les vérifier. Vous n'êtes pas censé soumettre votre projet , mais il sera bon si vous le faites . Pensez à des projets comme une chance de consolider vos connaissances de travail des sujets abordés - après tout, quelle meilleure façon d'apprendre quelque chose que de la pratiquer ?",
+      "AUTHOR": "Auteurs",
+      "NPROJECT": "nom du projet",
+      "DPROJECT": "La description",
+      "REPO": "Dépôt"
+   },
    "RESOURCE": "Ressources",
    "INFO": "Academy Infos",
    "FEED": "Retour d'information"
