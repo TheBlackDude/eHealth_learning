@@ -23,7 +23,22 @@
       "DPROJECT": "La description",
       "REPO": "Dépôt"
    },
-   "RESOURCE": "Ressources",
-   "INFO": "Academy Infos",
+   "RESOURCE": {
+      "HEAD": "Ressources",
+      "HEAD2": "Davantage de ressources",
+      "HEAD3": "Lectures",
+      "HEAD4": "Vidéos",
+      "CONTENT1": "Ces livres et blogs qu'ils vont profondément dans chacun des sujets couverts juste choisi celui que vous aimez et commencer progresser vos connaissances . Actuellement , les blogs sont juste une liste des articles que je trouve intéressant - il peut y avoir plus de structure à l'avenir !",
+      "CONTENT2": "Ces matériaux vidéo en option sont affichés ici pour compléter le matériel de cours pour ceux qui sont très intéressés par les sujets abordés . mais vous pouvez les ignorer ; cependant, le matériau est fascinant et intéressant de regarder. Nous vous encourageons donc vraiment passer par eux si vous voulez en savoir plus sur les sujets abordés .",
+      "BOOK": "Livres",
+      "BLOG": "Blogs",
+      "VIDEO": "Vidéos",
+      "HOST": "instructeurs"
+   },
+   "INFO": {
+      "HEAD": "Academy Infos",
+      "HEAD2": "A propos de l'Académie",
+      "CONTENT": "Les principes fondamentaux et de l'utilisation contemporaine des sciences informatiques . l'accent principal sur le développement de meilleures pratiques dans l'écriture de logiciels , développement de bases de données , les applications de SIG , la mise en œuvre de bons réseaux , bons rôles de sécurité et d'explorer les parties extensibles et uniques de l'informatique qui le rend comme un puissant domaine dans notre monde aujourd'hui ."
+   },
    "FEED": "Retour d'information"
 }

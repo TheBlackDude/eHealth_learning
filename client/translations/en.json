@@ -24,7 +24,22 @@
       "DPROJECT": "Description",
       "REPO": "Repository"
    },
-   "RESOURCE": "Resources",
-   "INFO": "Academy Info",
+   "RESOURCE": {
+      "HEAD": "Resources",
+      "HEAD2": "More Resources",
+      "HEAD3": "Readings",
+      "HEAD4": "Videos",
+      "CONTENT1": "These Books and Blogs they go deep in each of the Topics Covered just chose the one you like and Start Advancing your Knowledge. Currently, the blogs are just a list of articles I find interesting - there may be more structure in the future!",
+      "CONTENT2": "These optional Video materials are posted here to supplement the course material for those who are very interested in the Topics Covered. but you can ignore these; however, the material is fascinating and worth looking at. So we really encourage you to go through them if you want to know more about the Topics Covered.",
+      "BOOK": "Books",
+      "BLOG": "Blogs",
+      "VIDEO": "Videos",
+      "HOST": "Instructors"
+   },
+   "INFO": {
+      "HEAD": "Academy Info",
+      "HEAD2": "About The Academy",
+      "CONTENT": "The fundamentals and contemporary usage of Computer Science. Primary focus on developing best practices in writing Software, Developing Databases, GIS Applications, Implementing Good Networks, Good Security Roles and exploring the extensible and unique parts of Computer Science that makes it such a powerful Domain in Our Today World."
+   },
    "FEED": "FeedBack"
 }
