@@ -18,9 +18,14 @@ from django.conf.urls.i18n import i18n_patterns
 from django.contrib import admin
 from content.views import index
 from content import urls as content_urls
+from authentication.views import LoginView, LogoutView
+from authentication.urls import router
 
 urlpatterns = [ 
     url(r'^$', index, name='index'),
+    url(r'^api/', include(router.urls)),
+    url(r'^api/auth/login/$', LoginView.as_view()),
+    url(r'^api/auth/logout/$', LogoutView.as_view()),
     url(r'^api/', include(content_urls)),
     url(r'^admin/', include(admin.site.urls)),
 ]
