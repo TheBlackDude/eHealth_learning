@@ -87,8 +87,8 @@
                     </table>
                   </div>
                   <div style="margin-bottom:10px;">
-                      <a href="javascript:void(0)" class="btn btn-primary">Add Lecture</a>
-                      <p class="pull-right"><a href="javascript:void(0)" class="btn btn-primary">SignUp</a> <strong>Or</strong> <a href="javascript:void(0)" class="btn btn-primary">Login</a> <strong>To Add Lectures.</strong></p>
+                      <a href="javascript:void(0)" ng-show="vm.IsAuthenticated()" ng-click="vm.addLecture()" class="btn btn-primary">Add Lecture</a>
+                      <p class="pull-right"><span ng-hide="vm.IsAuthenticated()"><a href="javascript:void(0)" ng-click="vm.register()" class="btn btn-primary">SignUp</a> <strong>Or</strong> <a href="javascript:void(0)" ng-click="vm.login()" class="btn btn-primary">Login</a> <strong>To Add Lectures.</strong></span> <a href="javascript:void(0)" ng-show="vm.IsAuthenticated()" ng-click="vm.Logout()" class="btn btn-primary">Logout</a></p>
                 </div>
                 </div>
                 <!-- End Lectures -->

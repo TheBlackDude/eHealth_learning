@@ -15,13 +15,14 @@
             unAuthenticate: unAuthenticate
         }
 
-        function register(name,email,password) {
+        function register(name,email,password, confirm_pass) {
             var Email = email;
             var Password = password;
             return $http.post('/api/accounts/', {
                 name: name,
                 email: email,
-                password: password
+                password: password,
+                confirm_pass: confirm_pass
             }).success(function(data){
                 Snackbar.show('Thanks for Signing Up');
                 Authentication.login(Email,Password);
@@ -38,6 +39,7 @@
                 Authentication.setAuthenticatedAccount(data);
             }).error(function(err) {
                 Snackbar.error(err);
+                console.log(err);
             });
         }
 

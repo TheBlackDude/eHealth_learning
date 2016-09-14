@@ -51,6 +51,8 @@ INSTALLED_APPS = (
     'authentication',
 )
 
+AUTH_USER_MODEL = 'authentication.Account'
+
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.locale.LocaleMiddleware',
